@@ -1,37 +1,34 @@
-<div align="center">
+# `asdf` plugin for benthos 
 
-# asdf-benthos [![Build](https://github.com/benthosdev/asdf-benthos/actions/workflows/build.yml/badge.svg)](https://github.com/benthosdev/asdf-benthos/actions/workflows/build.yml) [![Lint](https://github.com/benthosdev/asdf-benthos/actions/workflows/lint.yml/badge.svg)](https://github.com/benthosdev/asdf-benthos/actions/workflows/lint.yml)
+[![Build][build-badge]][build]
+[![Lint][lint-badge]][lint]
 
+[benthos][] plugin for the [asdf][] version manager.
 
-[benthos](https://benthos.dev) plugin for the [asdf version manager](https://asdf-vm.com).
-
-</div>
-
-# Contents
+## Contents
 
 - [Dependencies](#dependencies)
 - [Install](#install)
 - [Contributing](#contributing)
 - [License](#license)
 
-# Dependencies
+## Dependencies
 
 **TODO: adapt this section**
 
 - `bash`, `curl`, `tar`: generic POSIX utilities.
 - `SOME_ENV_VAR`: set this environment variable in your shell config to load the correct version of tool x.
 
-# Install
-
-Plugin:
+## Install the plugin
 
 ```shell
 asdf plugin add benthos
-# or
-asdf plugin add benthos https://github.com/benthosdev/asdf-benthos.git
+
+# ... or ...
+asdf plugin add benthos https://github.com/benthosdev/benthos-asdf.git
 ```
 
-benthos:
+## Install benthos
 
 ```shell
 # Show all installable versions
@@ -47,15 +44,25 @@ asdf global benthos latest
 benthos --version
 ```
 
-Check [asdf](https://github.com/asdf-vm/asdf) readme for more instructions on how to
+Check the [asdf][asdf-gh-repo] README for more instructions on how to
 install & manage versions.
 
 # Contributing
 
-Contributions of any kind welcome! See the [contributing guide](contributing.md).
+Contributions of any kind welcome! See the [contributing][] guide.
 
-[Thanks goes to these contributors](https://github.com/benthosdev/asdf-benthos/graphs/contributors)!
+Thanks goes to these [contributors][]!
 
 # License
 
 See [LICENSE](LICENSE) © [Ashley Jeffs](https://github.com/benthosdev/)
+
+[asdf-gh-repo]: https://github.com/asdf-vm/asdf
+[asdf]: https://asdf-vm.com
+[benthos]: https://benthos.dev
+[build-badge]: https://github.com/benthosdev/asdf-benthos/actions/workflows/build.yml/badge.svg
+[build]: https://github.com/benthosdev/asdf-benthos/actions/workflows/build.yml
+[contributing]: CONTRIBUTING.md
+[contributors]: https://github.com/benthosdev/asdf-benthos/graphs/contributors
+[lint-badge]: https://github.com/benthosdev/asdf-benthos/actions/workflows/lint.yml/badge.svg
+[lint]: https://github.com/benthosdev/asdf-benthos/actions/workflows/lint.yml
