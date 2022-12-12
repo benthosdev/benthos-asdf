@@ -148,6 +148,9 @@ install_benthos()
 
 	# check installation
 	$benthos_install_path/$benthos_bin -version
+	if ! check_cmd benthos; then
+    echo "Do not forget to add $benthos_install_path to your PATH!"
+	fi
 
 	echo "Successfully installed"
 	trap ERR
