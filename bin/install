@@ -7,4 +7,4 @@ export BENTHOS_INSTALL_PATH=${ASDF_INSTALL_PATH}
 
 # After the new install.sh is merged this can be replaced with ...
 # curl -Lsf https://sh.benthos.dev | bash
-./install.sh
+./install.sh ${ASDF_INSTALL_VERSION} ${ASDF_INSTALL_PATH}
