@@ -147,7 +147,7 @@ install_benthos()
 	$sudo_cmd rm -- "$dl"
 
 	# check installation
-	$benthos_bin -version
+	$benthos_install_path/$benthos_bin -version
 
 	echo "Successfully installed"
 	trap ERR
