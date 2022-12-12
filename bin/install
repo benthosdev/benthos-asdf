@@ -4,4 +4,4 @@ set -euo pipefail
 
 # After the new install.sh is merged this can be replaced with ...
 # curl -Lsf https://sh.benthos.dev | bash ${ASDF_INSTALL_VERSION} ${ASDF_INSTALL_PATH}
-./install.sh ${ASDF_INSTALL_VERSION} ${ASDF_INSTALL_PATH}
+./bin/install.sh ${ASDF_INSTALL_VERSION} ${ASDF_INSTALL_PATH}
