@@ -1,36 +1,19 @@
 # `asdf` plugin for benthos 
 
-[![Build][build-badge]][build]
 [![Lint][lint-badge]][lint]
-
-[benthos][] plugin for the [asdf][] version manager.
-
-## Contents
-
-- [Dependencies](#dependencies)
-- [Install](#install)
-- [Contributing](#contributing)
-- [License](#license)
-
-## Dependencies
-
-**TODO: adapt this section**
-
-- `bash`, `curl`, `tar`: generic POSIX utilities.
-- `SOME_ENV_VAR`: set this environment variable in your shell config to load the correct version of tool x.
 
 ## Install the plugin
 
 ```shell
-asdf plugin add benthos
-
-# ... or ...
 asdf plugin add benthos https://github.com/benthosdev/benthos-asdf.git
 ```
 
 ## Install benthos
 
 ```shell
+# Update the plugin
+asdf plugin update benthos
+
 # Show all installable versions
 asdf list-all benthos
 
@@ -46,6 +29,60 @@ benthos --version
 
 Check the [asdf][asdf-gh-repo] README for more instructions on how to
 install & manage versions.
+
+## Example
+
+```
+~/Development/Home/benthos-asdf (main ✔) ᐅ asdf list-all benthos | tail -5
+4.7.0
+4.8.0
+4.9.0
+4.9.1
+4.10.0
+~/Development/Home/benthos-asdf (main ✔) ᐅ asdf install benthos 4.9.1
+Benthos Installer
+
+Website: https://www.benthos.dev
+Docs: https://www.benthos.dev/docs/about
+Repo: https://github.com/benthosdev/benthos
+
+Downloading Benthos for linux/amd64...
+Extracting...
+Putting benthos in /home/roland/.asdf/installs/benthos/4.9.1/bin (may require password)
+Version: 4.9.1
+Date: 2022-10-06T14:20:52Z
+Do not forget to add /home/roland/.asdf/installs/benthos/4.9.1/bin to your PATH!
+Successfully installed
+~/Development/Home/benthos-asdf (main ✔) ᐅ asdf global benthos 4.9.1
+~/Development/Home/benthos-asdf (main ✔) ᐅ benthos --version
+Version: 4.9.1
+Date: 2022-10-06T14:20:52Z
+~/Development/Home/benthos-asdf (main ✔) ᐅ asdf install benthos 4.10.0
+Benthos Installer
+
+Website: https://www.benthos.dev
+Docs: https://www.benthos.dev/docs/about
+Repo: https://github.com/benthosdev/benthos
+
+Downloading Benthos for linux/amd64...
+Extracting...
+Putting benthos in /home/roland/.asdf/installs/benthos/4.10.0/bin (may require password)
+Version: 4.10.0
+Date: 2022-10-26T12:14:04Z
+Successfully installed
+~/Development/Home/benthos-asdf (main ✔) ᐅ asdf global benthos 4.10.0
+~/Development/Home/benthos-asdf (main ✔) ᐅ benthos --version
+Version: 4.10.0
+Date: 2022-10-26T12:14:04Z
+~/Development/Home/benthos-asdf (main ✔) ᐅ asdf list benthos
+  4.10.0
+  4.9.1
+~/Development/Home/benthos-asdf (main ✔) ᐅ asdf uninstall benthos 4.9.1
+~/Development/Home/benthos-asdf (main ✔) ᐅ asdf list benthos
+  4.10.0
+~/Development/Home/benthos-asdf (main ✔) ᐅ asdf current
+benthos         4.10.0          /home/roland/.tool-versions
+```
 
 # Contributing
 
