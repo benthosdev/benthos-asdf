@@ -2,10 +2,7 @@
 
 set -euo pipefail
 
-current_script_path=${BASH_SOURCE[0]}
-plugin_dir=$(dirname "$(dirname "$current_script_path")")
+if ! command -v curl >/dev/null; then echo "curl not found. Please install it."; exit 1; fi
+if ! command -v jq >/dev/null; then echo "jq not found. Please install it."; exit 1; fi
 
-# shellcheck source=../lib/utils.bash
-source "${plugin_dir}/lib/utils.bash"
-
-list_all_versions | sort_versions | xargs echo
+curl --silent https://api.github.com/repos/benthosdev/benthos/releases | jq '.[].name' -r | cut -c2- | sort -t "." -k1,1n -k2,2n -k3,3n | xargs -I {v} echo "v{v}
