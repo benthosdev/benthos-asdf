@@ -4,4 +4,5 @@ set -euo pipefail
 
 mkdir -p ${ASDF_INSTALL_PATH}/bin
 
-curl -Lsf https://sh.benthos.dev | bash ${ASDF_INSTALL_VERSION} ${ASDF_INSTALL_PATH}/bin
+#curl -Lsf https://sh.benthos.dev | bash ${ASDF_INSTALL_VERSION} ${ASDF_INSTALL_PATH}/bin
+curl -Lsf https://raw.githubusercontent.com/benthosdev/benthos/main/website/static/sh/install | bash ${ASDF_INSTALL_VERSION} ${ASDF_INSTALL_PATH}/bin
