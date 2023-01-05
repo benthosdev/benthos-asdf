@@ -98,6 +98,6 @@ See [LICENSE](LICENSE) © [Ashley Jeffs](https://github.com/benthosdev/)
 [asdf]: https://asdf-vm.com
 [benthos]: https://benthos.dev
 [contributing]: CONTRIBUTING.md
-[contributors]: https://github.com/benthosdev/asdf-benthos/graphs/contributors
-[lint-badge]: https://github.com/benthosdev/asdf-benthos/actions/workflows/lint.yml/badge.svg
-[lint]: https://github.com/benthosdev/asdf-benthos/actions/workflows/lint.yml
+[contributors]: https://github.com/benthosdev/benthos-asdf/graphs/contributors
+[lint-badge]: https://github.com/benthosdev/benthos-asdf/actions/workflows/lint.yml/badge.svg
+[lint]: https://github.com/benthosdev/benthos-asdf/actions/workflows/lint.yml
