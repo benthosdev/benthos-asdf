@@ -2,7 +2,14 @@
 
 set -euo pipefail
 
-if ! command -v curl >/dev/null; then echo "curl not found. Please install it."; exit 1; fi
-if ! command -v jq >/dev/null; then echo "jq not found. Please install it."; exit 1; fi
+if ! command -v curl >/dev/null; then
+  echo "curl not found. Please install it."
+  exit 1
+fi
+
+if ! command -v jq >/dev/null; then
+  echo "jq not found. Please install it."
+  exit 1
+fi
 
 curl --silent https://api.github.com/repos/benthosdev/benthos/releases | jq '.[].name' -r | cut -c2- | sort -t "." -k1,1n -k2,2n -k3,3n | tr '\n' ' '
