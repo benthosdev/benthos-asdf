@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -euo pipefail
+set -eo pipefail
 
 if ! command -v curl >/dev/null; then
   echo "curl not found. Please install it."
