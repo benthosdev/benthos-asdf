@@ -2,10 +2,10 @@
 
 set -euo pipefail
 
-current_script_path=${BASH_SOURCE[0]}
-plugin_dir=$(dirname "$(dirname "$current_script_path")")
+#BENTHOS_INSTALL_URL="https://sh.benthos.dev"
+BENTHOS_INSTALL_URL="https://raw.githubusercontent.com/benthosdev/benthos/main/website/static/sh/install"
+ASDF_INSTALL_PATH_BIN="${ASDF_INSTALL_PATH}/bin"
 
-# shellcheck source=../lib/utils.bash
-source "${plugin_dir}/lib/utils.bash"
+mkdir -p "${ASDF_INSTALL_PATH_BIN}"
 
-install_version "$ASDF_INSTALL_TYPE" "$ASDF_INSTALL_VERSION" "$ASDF_INSTALL_PATH"
+curl -Lsf "${BENTHOS_INSTALL_URL}" | bash -s "${ASDF_INSTALL_VERSION}" "${ASDF_INSTALL_PATH_BIN}"
