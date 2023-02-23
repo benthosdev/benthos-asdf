@@ -2,8 +2,7 @@
 
 set -euo pipefail
 
-#BENTHOS_INSTALL_URL="https://sh.benthos.dev"
-BENTHOS_INSTALL_URL="https://raw.githubusercontent.com/benthosdev/benthos/main/website/static/sh/install"
+BENTHOS_INSTALL_URL="https://sh.benthos.dev"
 ASDF_INSTALL_PATH_BIN="${ASDF_INSTALL_PATH}/bin"
 
 mkdir -p "${ASDF_INSTALL_PATH_BIN}"
