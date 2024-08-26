@@ -18,4 +18,4 @@ else
   GITHUB_AUTHENTICATION_HEADER=("--header" "Authorization: token $GITHUB_API_TOKEN")
 fi
 
-curl "${GITHUB_AUTHENTICATION_HEADER[@]}" --silent https://api.github.com/repos/benthosdev/benthos/releases | jq '.[].name' -r | cut -c2- | sort -t "." -k1,1n -k2,2n -k3,3n | tr '\n' ' '
+curl -L "${GITHUB_AUTHENTICATION_HEADER[@]}" --silent https://api.github.com/repos/benthosdev/benthos/releases | jq '.[].name' -r | cut -c2- | sort -t "." -k1,1n -k2,2n -k3,3n | tr '\n' ' '
